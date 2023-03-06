@@ -124,16 +124,58 @@ Here's an example of how to use `GROUP BY` to find the total sales for each prod
       
 ```
 
-## JOIN statement
+## JOIN statements
 
 
-The JOIN statement is used to combine rows from two or more tables based on a related column.
+In SQL, the JOIN clause is used to combine rows from two or more tables based on a related column between them. There are several types of joins, each with its own syntax and purpose. Here are a few examples of how to use `JOIN` in SQL:
+
+#### Inner Join: 
+The most common type of join is the inner join, which returns only the rows from both tables that have matching values in the specified columns. Here's an example:
 
 ```SQL
-    SELECT 
-      orders.order_id,customers.first_name,customers.last_name
-      FROM orders
-      INNER JOIN customers ON orders.customer_id = customers customer_id;
+    SELECT customers.customer_name, orders.order_date
+      FROM customers
+        INNER JOIN orders
+        ON customers.customer_id = orders.customer_id;
+
+
+```
+
+
+#### Left Join: 
+A left join returns all the rows from the left table and the matching rows from the right table. If there is no matching row in the right table, the result will contain NULL values. Here's an example:
+
+```SQL
+    SELECT customers.customer_name, orders.order_date
+      FROM customers
+        LEFT JOIN orders
+        ON customers.customer_id = orders.customer_id;
+
+
+```
+
+
+#### Full Outer Join: 
+A full outer join returns all the rows from both tables, including those where there is no matching row in the other table. If there is no matching row, the result will contain NULL values. Here's an example:
+
+```SQL
+    SELECT customers.customer_name, orders.order_date
+      FROM customers
+        FULL OUTER JOIN orders
+        ON customers.customer_id = orders.customer_id;
+
+
+```
+
+
+#### Self Join:
+A self join is a join where a table is joined with itself. This is often used when you have a hierarchical or nested structure in your data. Here's an example:
+
+```SQL
+    SELECT e1.employee_name, e2.employee_name as manager_name
+      FROM employees e1
+      INNER JOIN employees e2
+      ON e1.manager_id = e2.employee_id;
 
 
 ```
