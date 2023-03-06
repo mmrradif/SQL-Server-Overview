@@ -68,6 +68,42 @@ The SELECT statement can also be used with a WHERE clause to filter the results 
 ```
 
 
+## GROUP BY statement
+
+The GROUP BY statement is used to group the results of a SELECT statement by one or more columns.
+
+```SQL
+   SELECT city, COUNT(*) FROM customers
+        GROUP BY city;
+
+
+```
+
+The `GROUP BY` clause in SQL is used to group rows based on the values in one or more columns. The resulting groups can then be used to perform aggregate functions, such as `SUM, AVG, MAX, MIN, or COUNT`.
+
+Here's an example of how to use `GROUP BY` to find the total sales for each product category in a table called sales:
+
+```SQL
+  SELECT category, SUM(amount) as total_sales
+    FROM sales
+      GROUP BY category;
+      
+```
+
+## HAVING clause:
+
+The `HAVING` clause is used to filter groups based on a condition. It's similar to the WHERE clause, but it's applied after the `GROUP BY` clause. Here's an example:
+
+```SQL
+  SELECT customer_id, COUNT(*) AS num_orders
+    FROM orders
+    GROUP BY customer_id
+    HAVING COUNT(*) > 5;
+
+
+```
+
+
 
 
 ## INSERT statement
@@ -148,27 +184,8 @@ The ORDER BY statement is used to sort the results of a SELECT statement in asce
 
 ```
 
-## GROUP BY statement
-
-The GROUP BY statement is used to group the results of a SELECT statement by one or more columns.
-
-```SQL
-   SELECT city, COUNT(*) FROM customers
-        GROUP BY city;
 
 
-```
-
-The `GROUP BY` clause in SQL is used to group rows based on the values in one or more columns. The resulting groups can then be used to perform aggregate functions, such as `SUM, AVG, MAX, MIN, or COUNT`.
-
-Here's an example of how to use `GROUP BY` to find the total sales for each product category in a table called sales:
-
-```SQL
-  SELECT category, SUM(amount) as total_sales
-    FROM sales
-      GROUP BY category;
-      
-```
 
 ## JOIN statements
 
