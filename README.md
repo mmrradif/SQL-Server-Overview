@@ -17,13 +17,25 @@ The SELECT statement is used to retrieve data from one or more tables in a datab
 
 
 
-## SELECT DISTINCT statement
+## DISTINCT clause
 
 The SELECT DISTINCT statement is used to retrieve unique values from a column. Here's an example:
 
 ```SQL
   SELECT DISTINCT category
     FROM products;
+
+
+```
+
+
+## WHERE clause
+
+The SELECT statement can also be used with a WHERE clause to filter the results based on a certain condition.
+
+```SQL
+    SELECT * FROM customers
+        WHERE city = 'New York';
 
 
 ```
@@ -94,16 +106,7 @@ The ALTER statement is used to modify the structure of an existing table in a da
 ```
 
 
-## SELECT with WHERE clause
 
-The SELECT statement can also be used with a WHERE clause to filter the results based on a certain condition.
-
-```SQL
-    SELECT * FROM customers
-        WHERE city = 'New York';
-
-
-```
 
 ## ORDER BY statement
 
