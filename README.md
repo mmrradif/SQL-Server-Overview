@@ -15,6 +15,20 @@ The SELECT statement is used to retrieve data from one or more tables in a datab
 
 ```
 
+
+
+## SELECT statement
+
+The SELECT DISTINCT statement is used to retrieve unique values from a column. Here's an example:
+
+```SQL
+  SELECT DISTINCT category
+    FROM products;
+
+
+```
+
+
 ## INSERT statement
 
 The INSERT statement is used to add new rows to a table.
