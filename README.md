@@ -29,6 +29,33 @@ The SELECT DISTINCT statement is used to retrieve unique values from a column. H
 ```
 
 
+
+## DISTINCT ON clause:
+
+The DISTINCT ON clause is used to retrieve unique values based on a specific column in a query that includes multiple columns. Here's an example:
+
+```SQL
+  SELECT DISTINCT ON (customer_id) customer_id, order_date, order_total
+    FROM orders
+    ORDER BY customer_id, order_date DESC;
+
+
+```
+
+
+## LIMIT clause:
+
+The LIMIT clause is used to limit the number of rows returned by a query. Here's an example:
+
+```SQL
+ SELECT customer_name
+    FROM customers
+    LIMIT 10;
+
+
+```
+
+
 ## WHERE clause
 
 The SELECT statement can also be used with a WHERE clause to filter the results based on a certain condition.
@@ -39,6 +66,8 @@ The SELECT statement can also be used with a WHERE clause to filter the results 
 
 
 ```
+
+
 
 
 ## INSERT statement
