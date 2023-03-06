@@ -121,6 +121,9 @@ Here's an example of how to use `GROUP BY` to find the total sales for each prod
   SELECT category, SUM(amount) as total_sales
     FROM sales
       GROUP BY category;
+      
+```
+
 ## JOIN statement
 
 
