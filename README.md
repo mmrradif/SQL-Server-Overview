@@ -102,7 +102,6 @@ The ORDER BY statement is used to sort the results of a SELECT statement in asce
 
 ```
 
-
 ## GROUP BY statement
 
 The GROUP BY statement is used to group the results of a SELECT statement by one or more columns.
@@ -113,7 +112,17 @@ The GROUP BY statement is used to group the results of a SELECT statement by one
 
 
 ```
+
+The `GROUP BY` clause in SQL is used to group rows based on the values in one or more columns. The resulting groups can then be used to perform aggregate functions, such as `SUM, AVG, MAX, MIN, or COUNT`.
+
+Here's an example of how to use `GROUP BY` to find the total sales for each product category in a table called sales:
+
+```SQL
+  SELECT category, SUM(amount) as total_sales
+    FROM sales
+      GROUP BY category;
 ## JOIN statement
+
 
 The JOIN statement is used to combine rows from two or more tables based on a related column.
 
