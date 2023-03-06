@@ -43,6 +43,18 @@ The DISTINCT ON clause is used to retrieve unique values based on a specific col
 ```
 
 
+## ORDER BY clause:
+
+The ORDER BY statement is used to sort the results of a SELECT statement in ascending or descending order based on one or more columns.
+
+```SQL
+    SELECT * FROM customers
+        ORDER BY last_name ASC, first_name ASC;
+
+
+```
+
+
 ## LIMIT clause:
 
 The LIMIT clause is used to limit the number of rows returned by a query. Here's an example:
@@ -173,21 +185,12 @@ The ALTER statement is used to modify the structure of an existing table in a da
 
 
 
-## ORDER BY statement
-
-The ORDER BY statement is used to sort the results of a SELECT statement in ascending or descending order based on one or more columns.
-
-```SQL
-    SELECT * FROM customers
-        ORDER BY last_name ASC, first_name ASC;
-
-
-```
 
 
 
 
-## JOIN statements
+
+## JOIN clause
 
 
 In SQL, the JOIN clause is used to combine rows from two or more tables based on a related column between them. There are several types of joins, each with its own syntax and purpose. Here are a few examples of how to use `JOIN` in SQL:
