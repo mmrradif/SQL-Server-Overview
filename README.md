@@ -3,7 +3,6 @@
 SQL Server is a relational database management system (RDBMS) developed by Microsoft. It is used to store and manage large amounts of data for various types of applications. SQL Server is a powerful and widely used RDBMS that provides a range of features and tools for managing and analyzing data. SQL (Structured Query Language) is a programming language used to manage and manipulate relational databases. __Here are some basic SQL statements with examples:__
 
 <br/>
-<br/>
 
 
 ## SELECT statement
